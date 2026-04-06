@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2026 Alysson Souza e Silva <alysson@ll9.com.br>
+# SPDX-License-Identifier: GPL-2.0-or-later
+
+post_install() {
+  cat <<'EOF'
+==> Restart plasmashell, or log out and back in, before adding the Met Éireann provider.
+EOF
+}
+
+post_upgrade() {
+  post_install
+}

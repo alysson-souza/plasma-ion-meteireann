@@ -1,0 +1,20 @@
+pkgbase = plasma-ion-meteireann
+	pkgdesc = Met Éireann weather ion for the KDE Plasma weather widget
+	pkgver = 0.1.0
+	pkgrel = 1
+	install = plasma-ion-meteireann.install
+	arch = x86_64
+	license = GPL-2.0-or-later
+	license = LGPL-2.0-or-later
+	makedepends = cmake
+	makedepends = extra-cmake-modules
+	depends = gcc-libs
+	depends = kcoreaddons
+	depends = kdeplasma-addons
+	depends = ki18n
+	depends = kio
+	depends = kunitconversion
+	depends = qt6-base
+	depends = qt6-declarative
+
+pkgname = plasma-ion-meteireann

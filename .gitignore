@@ -1,0 +1,10 @@
+build/
+.cache/
+.idea/
+.vscode/
+*.swp
+*.user
+pkg/
+src/
+*.pkg.tar.*
+*.src.tar.*

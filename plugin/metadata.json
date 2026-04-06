@@ -1,0 +1,8 @@
+{
+    "KPlugin": {
+        "Description": "Weather forecast by Met Éireann",
+        "Icon": "weather-clear",
+        "Name": "Met Éireann"
+    },
+    "Quality": 3
+}

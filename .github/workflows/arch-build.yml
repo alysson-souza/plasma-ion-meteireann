@@ -1,0 +1,46 @@
+# SPDX-FileCopyrightText: 2026 Alysson Souza e Silva <alysson@ll9.com.br>
+# SPDX-License-Identifier: GPL-2.0-or-later
+
+name: Arch build
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: archlinux:latest
+
+    steps:
+      - name: Update system and install dependencies
+        run: |
+          pacman -Syu --noconfirm
+          pacman -S --noconfirm --needed \
+            base-devel \
+            cmake \
+            extra-cmake-modules \
+            git \
+            kcoreaddons \
+            kdeplasma-addons \
+            ki18n \
+            kio \
+            kunitconversion \
+            qt6-base \
+            qt6-declarative
+
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Configure
+        run: cmake -B build -S .
+
+      - name: Build
+        run: cmake --build build -j2
+
+      - name: Stage install
+        run: DESTDIR="$PWD/stage" cmake --install build

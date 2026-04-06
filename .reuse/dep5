@@ -1,0 +1,16 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: plasma-ion-meteireann
+Upstream-Contact: Alysson Souza e Silva <alysson@ll9.com.br>
+Source: https://github.com/alysson-souza/plasma-ion-meteireann
+
+Files: .SRCINFO .github/workflows/arch-build.yml .gitignore .reuse/dep5 CMakeLists.txt PKGBUILD README.md NOTICE.met-eireann.txt plasma-ion-meteireann.install plugin/CMakeLists.txt plugin/ion_meteireann.cpp plugin/ion_meteireann.h plugin/metadata.json include/plasmaweatherdata_export.h include/plasmaweatherion_export.h
+Copyright: 2026 Alysson Souza e Silva <alysson@ll9.com.br>
+License: GPL-2.0-or-later
+
+Files: include/ion.h
+Copyright: 2007-2009 Shawn Starr <shawn.starr@rogers.com>
+License: LGPL-2.0-or-later
+
+Files: include/currentday.h include/forecast.h include/futuredays.h include/lastday.h include/lastobservation.h include/locations.h include/metadata.h include/station.h include/warnings.h
+Copyright: 2025 Bohdan Onofriichuk <bogdan.onofriuchuk@gmail.com>
+License: GPL-2.0-or-later

@@ -1,0 +1,22 @@
+Met Éireann data notice
+=======================
+
+This project redisplays and derives forecast information from Met Éireann data.
+
+Source:
+https://www.met.ie/
+
+Open data information:
+https://www.met.ie/about-us/specialised-services/open-data
+
+Forecast API used by this project:
+http://openaccess.pf.api.met.ie/metno-wdb2ts/locationforecast
+
+Required attribution and disclaimer text should be reviewed against Met Éireann's
+current Open Data terms before redistribution. In particular, the Met Éireann
+Open Data page requires attribution to Met Éireann, source identification,
+licence information, a disclaimer of liability, and notice of modifications
+where applicable.
+
+This project modifies and reformats forecast data for use in the KDE Plasma
+weather widget.
