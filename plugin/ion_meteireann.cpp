@@ -721,17 +721,19 @@ void MetEireannIon::updateWeather(const ForecastRequestState &request)
         }
 
         orderedDates.append(intervalDate);
-        if (orderedDates.size() == MAX_FORECAST_DAYS) {
-            break;
-        }
     }
 
+    int addedDays = 0;
     for (const auto &date : orderedDates) {
+        const auto daySummary = summarizeDayPart(request.instantForecasts, request.intervalForecasts, date, false);
+        if (date == today && !daySummary.interval && qIsNaN(daySummary.highTemp) && qIsNaN(daySummary.lowTemp)) {
+            continue;
+        }
+
         FutureDayForecast futureDay;
         futureDay.setMonthDay(date.day());
         futureDay.setWeekDay(QLocale().standaloneDayName(date.dayOfWeek(), QLocale::ShortFormat));
 
-        const auto daySummary = summarizeDayPart(request.instantForecasts, request.intervalForecasts, date, false);
         if (daySummary.interval || !qIsNaN(daySummary.highTemp) || !qIsNaN(daySummary.lowTemp)) {
             FutureForecast dayForecast;
             if (daySummary.interval) {
@@ -771,6 +773,10 @@ void MetEireannIon::updateWeather(const ForecastRequestState &request)
 
         if (futureDay.daytime().has_value() || futureDay.night().has_value()) {
             futureDays->addDay(futureDay);
+            ++addedDays;
+            if (addedDays == MAX_FORECAST_DAYS) {
+                break;
+            }
         }
     }
 
