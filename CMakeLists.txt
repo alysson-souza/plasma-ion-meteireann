@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-set(PROJECT_VERSION "0.1.0")
+set(PROJECT_VERSION "0.1.1")
 project(plasma-ion-meteireann VERSION ${PROJECT_VERSION})
 
 set(QT_MIN_VERSION "6.10.0")

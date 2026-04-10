@@ -1,6 +1,6 @@
 pkgbase = plasma-ion-meteireann
 	pkgdesc = Met Éireann weather ion for the KDE Plasma weather widget
-	pkgver = 0.1.0
+	pkgver = 0.1.1
 	pkgrel = 1
 	install = plasma-ion-meteireann.install
 	arch = x86_64

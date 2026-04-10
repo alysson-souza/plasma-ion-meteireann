@@ -4,7 +4,7 @@
 # Maintainer: Alysson Souza e Silva <alysson@ll9.com.br>
 
 pkgname=plasma-ion-meteireann
-pkgver=0.1.0
+pkgver=0.1.1
 pkgrel=1
 pkgdesc="Met Éireann weather ion for the KDE Plasma weather widget"
 arch=('x86_64')
